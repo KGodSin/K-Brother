@@ -1,37 +1,37 @@
-@import "./variables";
-@import "./font";
+@import "./_variables";
+@import "./_font";
 
-h1 {
+.h1 {
 	font-size: 96px;
 	letter-spacing: -1.5;
 	font-weight: $weight-light;
 }
 
-h2 {
+.h2 {
 	font-size: 60px;
 	letter-spacing: -0.5;
 	font-weight: $weight-light;
 }
 
-h3 {
+.h3 {
 	font-size: 48px;
 	letter-spacing: 0;
 	font-weight: $weight-regular;
 }
 
-h4 {
+.h4 {
 	font-size: 34px;
 	letter-spacing: 0.25;
 	font-weight: $weight-regular;
 }
 
-h5 {
+.h5 {
 	font-size: 24px;
 	letter-spacing: 0;
 	font-weight: $weight-regular;
 }
 
-h6 {
+.h6 {
 	font-size: 20px;
 	letter-spacing: 0.25;
 	font-weight: $weight-medium;

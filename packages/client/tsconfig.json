@@ -1,6 +1,15 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "jsx": "react"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "./src/*"
+      ],
+      "styles": [
+        "./styles"
+      ]
+    }
   }
 }
