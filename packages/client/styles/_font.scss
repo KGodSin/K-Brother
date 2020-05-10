@@ -1,23 +1,23 @@
-@import "./_variables.scss";
+@import "_variables";
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: $weight-light;
-	src: url("~styles/font/Roboto-Light.ttf") format("ttf");
+	src: url(~styles/font/Roboto-Light.ttf) format("ttf");
 }
 @font-face {
 	font-family: "Roboto";
 	font-style: italic;
 	font-weight: $weight-light;
-	src: url("~styles/font/Roboto-LightItalic.ttf") format("ttf");
+	src: url(~styles/font/Roboto-LightItalic.ttf) format("ttf");
 }
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
 	font-weight: $weight-regular;
-	src: url("~styles/font/Roboto-Regular.ttf") format("ttf");
+	src: url(~styles/font/Roboto-Regular.ttf) format("ttf");
 }
 
 @font-face {

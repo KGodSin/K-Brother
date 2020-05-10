@@ -14,6 +14,18 @@
         "shippedProposals": true
       }
     ],
+    "@babel/preset-typescript",
     "@babel/preset-react"
-  ]
+  ],
+  "plugins": [
+    [
+      "module-resolver",
+      {
+        "alias": {
+          "components": "./src/components",
+          "styles": "./src/styles"
+        }
+      }
+    ]
+  ],
 }
