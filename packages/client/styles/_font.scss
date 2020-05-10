@@ -1,34 +1,34 @@
-@import "./variables";
+@import "_variables";
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
-	font-weight: $font-light;
-	src: url(./font/Roboto-Light.ttf) format("ttf");
+	font-weight: $weight-light;
+	src: url(~styles/font/Roboto-Light.ttf) format("ttf");
 }
 @font-face {
 	font-family: "Roboto";
 	font-style: italic;
-	font-weight: $font-light;
-	src: url(./font/Roboto-LightItalic.ttf) format("ttf");
+	font-weight: $weight-light;
+	src: url(~styles/font/Roboto-LightItalic.ttf) format("ttf");
 }
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
-	font-weight: $font-regular;
-	src: url(./font/Roboto-Regular.ttf) format("ttf");
+	font-weight: $weight-regular;
+	src: url(~styles/font/Roboto-Regular.ttf) format("ttf");
 }
 
 @font-face {
 	font-family: "Roboto";
 	font-style: normal;
-	font-weight: $font-medium;
-	src: url(./font/Roboto-Medium.ttf) format("ttf");
+	font-weight: $weight-medium;
+	src: url(~styles/font/Roboto-Medium.ttf) format("ttf");
 }
 @font-face {
 	font-family: "Roboto";
 	font-style: italic;
-	font-weight: $font-medium;
-	src: url(./font/Roboto-Medium.ttf) format("ttf");
+	font-weight: $weight-medium;
+	src: url(~styles/font/Roboto-Medium.ttf) format("ttf");
 }
