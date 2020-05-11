@@ -1,20 +1,22 @@
 import * as React from "react";
-import "./Typography.scss";
-type Props = {
-	variant:
-		| "h1"
-		| "h2"
-		| "h3"
-		| "h4"
-		| "h5"
-		| "h6"
-		| "body1"
-		| "body2"
-		| "subtitle1"
-		| "subtitle2";
+import "./Typography.module.scss";
+
+export type TypographyVariant =
+	| "h1"
+	| "h2"
+	| "h3"
+	| "h4"
+	| "h5"
+	| "h6"
+	| "body1"
+	| "body2"
+	| "subtitle1"
+	| "subtitle2";
+export type TypographyProps = {
+	variant?: TypographyVariant;
 	children: JSX.Element | string;
 };
 
-export default function Typography({ variant, children }: Props) {
+export default function Typography({ variant, children }: TypographyProps) {
 	return <div className={variant}>{children}</div>;
 }

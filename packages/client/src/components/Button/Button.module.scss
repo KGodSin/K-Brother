@@ -1,0 +1,15 @@
+@import "~styles/common";
+
+.Button {
+	&.small {
+		padding: 8px;
+	}
+
+	&.medium {
+		padding: 12px;
+	}
+
+	&.large {
+		padding: 16px;
+	}
+}
