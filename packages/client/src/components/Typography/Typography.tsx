@@ -17,6 +17,14 @@ export type TypographyProps = {
 	children: JSX.Element | string;
 };
 
-export default function Typography({ variant, children }: TypographyProps) {
-	return <div className={variant}>{children}</div>;
+export default function Typography({
+	variant,
+	children,
+	...rest
+}: TypographyProps & React.ComponentProps<"div">) {
+	return (
+		<div className={variant} {...rest}>
+			{children}
+		</div>
+	);
 }

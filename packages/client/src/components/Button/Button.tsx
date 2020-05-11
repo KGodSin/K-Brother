@@ -9,14 +9,16 @@ export type ButtonProps = {
 	color?: ColorProps;
 	variant?: "rounded" | "square";
 	size?: "small" | "medium" | "large";
-	children?: JSX.Element;
+	children?: JSX.Element | string;
+	fullWidth?: boolean;
 };
 
 export default function Button({
-	color,
-	variant,
+	color = "symbol",
+	variant = "square",
 	children,
-	size,
+	size = "medium",
+	fullWidth,
 }: ButtonProps) {
 	const typographyVariant = React.useMemo<TypographyVariant>(() => {
 		switch (size) {
@@ -29,9 +31,14 @@ export default function Button({
 				return "body1";
 		}
 	}, [size]);
+
 	return (
-		<div>
+		<button
+			className={`${Style.Button} ${Style[color]} ${Style[variant]} ${
+				Style[size]
+			} ${fullWidth ? Style.fullWidth : ""}`}
+		>
 			<Typography variant={typographyVariant}>{children}</Typography>
-		</div>
+		</button>
 	);
 }

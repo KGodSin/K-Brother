@@ -1,6 +1,13 @@
 @import "~styles/common";
 
 .Button {
+	cursor: pointer;
+	display: inline;
+	border: none;
+
+	&:active {
+		opacity: 0.8;
+	}
 	&.small {
 		padding: 8px;
 	}
@@ -11,5 +18,32 @@
 
 	&.large {
 		padding: 16px;
+	}
+
+	&.primary {
+		background-color: $primary-color;
+		color: $primary-text-color;
+	}
+
+	&.secondary {
+		background-color: $secondary-color;
+		color: $secondary-text-color;
+	}
+
+	&.symbol {
+		background-color: $symbol-color;
+		color: $symbol-text-color;
+	}
+
+	&.fullWidth {
+		width: 100%;
+	}
+
+	&.rounded {
+		border-radius: 100px;
+	}
+
+	&.square {
+		border-radius: 4px;
 	}
 }
