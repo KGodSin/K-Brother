@@ -33,7 +33,8 @@
       true,
       "tabs",
       2
-    ]
+    ],
+    "interface-over-type-literal": false
   },
   "rulesDirectory": []
 }

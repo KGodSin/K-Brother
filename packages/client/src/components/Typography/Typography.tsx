@@ -1,6 +1,7 @@
 import * as React from "react";
 import Style from "./Typography.module.scss";
 import { ColorProps } from "classes/styles";
+import ac from "util/addClassName";
 
 export type TypographyVariant =
 	| "h1"
@@ -29,13 +30,10 @@ export default function Typography({
 }: TypographyProps) {
 	return (
 		<div
-			className={
-				Style[variant] +
-				" " +
-				Style[color + "-color"] +
-				" " +
-				Style[text + "-text-color"]
-			}
+			className={ac(Style[variant], [
+				Style[color + "-color"],
+				Style[text + "-text-color"],
+			])}
 		>
 			{children}
 		</div>
