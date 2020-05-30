@@ -7,7 +7,6 @@
 	"license": "ISC",
 	"scripts": {
 		"styleguidist": "styleguidist server --config styleguide.config.js",
-		"start": "parcel src/index.html --open --port 1337",
 		"build": "NODE_ENV=development webpack --config webpack.config.js",
 		"storybook": "start-storybook -p 9009 -s public",
 		"build-storybook": "build-storybook -s public"
