@@ -1,7 +1,7 @@
 import * as React from "react";
 import Style from "./Typography.module.scss";
 import { ColorProps } from "classes/styles";
-import ac from "util/addClassName";
+import ac from "util/addClassName/addClassName";
 
 export type TypographyVariant =
 	| "h1"
