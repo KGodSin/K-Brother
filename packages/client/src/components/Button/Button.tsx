@@ -8,13 +8,15 @@ export type ButtonProps = {
 	variant?: "rounded" | "square";
 	size?: "small" | "medium" | "large";
 	children?: JSX.Element | string;
+	fullWidth?: boolean;
 };
 
 export default function Button({
-	color,
-	variant,
+	color = "symbol",
+	variant = "square",
 	children,
-	size,
+	size = "medium",
+	fullWidth,
 	...rest
 }: ButtonProps) {
 	const typographyVariant = React.useMemo<TypographyVariant>(() => {
@@ -28,6 +30,7 @@ export default function Button({
 				return "body1";
 		}
 	}, [size]);
+
 	return (
 		<button
 			className={`${Style.Button}  ${Style[variant]} ${Style[color]} ${Style[size]}`}

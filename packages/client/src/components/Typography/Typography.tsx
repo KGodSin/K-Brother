@@ -23,10 +23,10 @@ export type TypographyProps = {
 export default function Typography({
 	variant,
 	children,
-	color,
-}: TypographyProps) {
+	...rest
+}: TypographyProps & React.ComponentProps<"div">) {
 	return (
-		<div className={Style[variant] + " " + Style[color + "-text-color"]}>
+		<div className={variant} {...rest}>
 			{children}
 		</div>
 	);
