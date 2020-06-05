@@ -1,3 +1,5 @@
+import { isValidClass } from "util/checkDataType/isValidData";
+
 // export default function addClassName(): string;
 export default function addClassName(...args: any[]): string {
 	const argLen = args.length;
@@ -5,7 +7,7 @@ export default function addClassName(...args: any[]): string {
 	for (let i = 0; i < argLen; i++) {
 		if (Array.isArray(args[i])) {
 			classStr += testFunc(args[i]);
-		} else {
+		} else if (isValidClass(args[i])) {
 			classStr += args[i] + " ";
 		}
 	}
@@ -16,7 +18,9 @@ const testFunc = data => {
 	const dataLen = data.length;
 	let dataStr = "";
 	for (let i = 0; i < dataLen; i++) {
-		dataStr += data[i] + " ";
+		if (isValidClass(data[i])) {
+			dataStr += data[i] + " ";
+		}
 	}
 	return dataStr;
 };
