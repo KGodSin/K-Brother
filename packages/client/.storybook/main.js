@@ -1,7 +1,12 @@
 const webpack = require("../webpack.config");
 
 module.exports = {
-	stories: ["../src/**/*.stories.[tj]sx"],
+	stories: ["../src/**/*.stories.(ts|tsx|js|jsx|mdx)"],
+	addons: [
+		{
+			name: "@storybook/addon-docs",
+		},
+	],
 	webpackFinal: async config => {
 		config.module.rules = [...config.module.rules, ...webpack.module.rules];
 		config.plugins = [...config.plugins, ...webpack.plugins];

@@ -1,15 +1,13 @@
 import * as React from "react";
-import Typography, {
-	TypographyVariant,
-	TypographyProps,
-} from "components/Typography/index";
+import Typography from "components/Typography/index";
 import Style from "./Button.module.scss";
+import { TypographyVariant } from "components/Typography/Typography";
 
 export type ButtonProps = {
 	color?: ColorProps;
 	variant?: "rounded" | "square";
 	size?: "small" | "medium" | "large";
-	children?: JSX.Element;
+	children?: JSX.Element | string;
 };
 
 export default function Button({
@@ -17,6 +15,7 @@ export default function Button({
 	variant,
 	children,
 	size,
+	...rest
 }: ButtonProps) {
 	const typographyVariant = React.useMemo<TypographyVariant>(() => {
 		switch (size) {
@@ -30,8 +29,19 @@ export default function Button({
 		}
 	}, [size]);
 	return (
-		<div>
-			<Typography variant={typographyVariant}>{children}</Typography>
-		</div>
+		<button
+			className={`${Style.Button}  ${Style[variant]} ${Style[color]} ${Style[size]}`}
+			{...rest}
+		>
+			<Typography variant={typographyVariant} color={color}>
+				{children}
+			</Typography>
+		</button>
 	);
 }
+
+Button.defaultProps = {
+	variant: "square",
+	color: "symbol",
+	size: "medium",
+};

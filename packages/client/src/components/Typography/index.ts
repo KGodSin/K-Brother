@@ -1,5 +1,3 @@
-import Typography from "components/Typography/Typography";
-
-export * from "./Typography";
+import Typography from "./Typography";
 
 export default Typography;

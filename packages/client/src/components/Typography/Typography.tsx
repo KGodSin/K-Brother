@@ -1,5 +1,7 @@
 import * as React from "react";
-import "./Typography.module.scss";
+import Style from "./Typography.module.scss";
+import { ColorProps } from "classes/styles";
+import PropTypes from "prop-types";
 
 export type TypographyVariant =
 	| "h1"
@@ -14,9 +16,24 @@ export type TypographyVariant =
 	| "subtitle2";
 export type TypographyProps = {
 	variant?: TypographyVariant;
-	children: JSX.Element | string;
+	children?: JSX.Element | string;
+	color?: ColorProps;
+	// text: ColorProps;
 };
 
-export default function Typography({ variant, children }: TypographyProps) {
-	return <div className={variant}>{children}</div>;
+export default function Typography({
+	variant,
+	children,
+	color,
+}: TypographyProps) {
+	return (
+		<div className={Style[variant] + " " + Style[color + "-text-color"]}>
+			{children}
+		</div>
+	);
 }
+
+Typography.defaultProps = {
+	variant: "body1",
+	color: "primary",
+};

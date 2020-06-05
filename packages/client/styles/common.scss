@@ -60,3 +60,26 @@
 	letter-spacing: 0.1;
 	font-weight: $weight-medium;
 }
+
+.symbol-color {
+	background-color: $symbol-color;
+}
+
+.primary-color {
+	background-color: $primary-color;
+}
+
+.secondary-color {
+	background-color: $symbol-color;
+}
+
+.primary-text-color {
+	color: $primary-text-color;
+}
+
+.secondary-text-color {
+	color: $secondary-text-color;
+}
+.symbol-text-color {
+	color: $symbol-text-color;
+}

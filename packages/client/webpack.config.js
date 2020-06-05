@@ -57,7 +57,14 @@ module.exports = {
 			},
 			{
 				test: /\.(ts|tsx)$/,
-				use: "babel-loader", // ts-loader 가 트랜스파일 해줍니다.
+				use: [
+					{
+						loader: "babel-loader",
+					},
+					{
+						loader: require.resolve("react-docgen-typescript-loader"),
+					},
+				], // ts-loader 가 트랜스파일 해줍니다.
 				exclude: /node_modules/, // node_modules 디렉토리에 있는 파일들이 제외하고
 			},
 		],
