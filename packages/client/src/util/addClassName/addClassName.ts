@@ -1,6 +1,6 @@
 import { isValidClass } from "util/checkDataType/isValidData";
-
 // export default function addClassName(): string;
+
 export default function addClassName(...args: any[]): string {
 	const argLen = args.length;
 	let classStr = "";
