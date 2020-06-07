@@ -55,7 +55,7 @@ export const withText = () => {
 		defaultValue.variant,
 	) as TypographyVariant;
 	return (
-		<Typography variant={variant} color={value} text={value2}>
+		<Typography variant={variant} color={value}>
 			This is h1
 		</Typography>
 	);

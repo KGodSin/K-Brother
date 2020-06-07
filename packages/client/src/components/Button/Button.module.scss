@@ -1,0 +1,61 @@
+@import "~styles/common";
+
+.Button {
+	&:hover {
+		opacity: 0.8;
+	}
+	border-style: none;
+	cursor: pointer;
+	display: inline;
+	border: none;
+
+	&:active {
+		opacity: 0.8;
+		padding: 8px;
+	}
+
+	&.medium {
+		padding: 12px;
+	}
+
+	&.large {
+		padding: 16px;
+	}
+
+	&.square,
+	&.square:active {
+		border-radius: 4px;
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+	}
+
+	&.fullWidth {
+		width: 100%;
+	}
+
+	&.primary {
+		background-color: $primary-color;
+		color: $primary-text-color;
+	}
+
+	&.secondary {
+		background-color: $secondary-color;
+		color: $secondary-text-color;
+	}
+
+	&.symbol {
+		background-color: $symbol-color;
+		color: $symbol-text-color;
+	}
+
+	&.fullWidth {
+		width: 100%;
+	}
+
+	&.rounded {
+		border-radius: 100px;
+	}
+
+	&.square {
+		border-radius: 4px;
+	}
+}
