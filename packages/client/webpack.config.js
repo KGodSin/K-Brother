@@ -25,14 +25,30 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-				use: [
+				test: /\.(woff(2)?|ttf|eot|svg|jpeg|jpg|png|gif)$/,
+				oneOf: [
 					{
-						loader: "file-loader",
-						options: {
-							name: "[name].[ext]",
-							outputPath: "fonts/",
-						},
+						test: /\.(woff(2)?|ttf|eot|svg)$/,
+						use: [
+							{
+								loader: "file-loader",
+								options: {
+									name: "[name].[ext]",
+									outputPath: "fonts/",
+								},
+							},
+						],
+					},
+					{
+						use: [
+							{
+								loader: "file-loader",
+								options: {
+									name: "[name].[ext]",
+									outputPath: "images/",
+								},
+							},
+						],
 					},
 				],
 			},
@@ -51,7 +67,13 @@ module.exports = {
 						],
 					},
 					{
-						use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+						use: [
+							MiniCssExtractPlugin.loader,
+							"css-loader",
+							{
+								loader: "sass-loader",
+							},
+						],
 					},
 				],
 			},

@@ -7,12 +7,12 @@
 	"license": "ISC",
 	"scripts": {
 		"styleguidist": "styleguidist server --config styleguide.config.js",
-		"start": "parcel src/index.html --open --port 1337",
+		// "start": "parcel src/index.html --open --port 1337",
 		"dev": "webpack-dev-server",
 		"build": "NODE_ENV=development webpack --config webpack.config.js",
-		"storybook": "start-storybook -p 9009 -s public",
+		"storybook": "start-storybook -p 9009 -s dist",
 		"build-storybook": "build-storybook -s public",
-    "test": "jest"
+		"test": "jest"
 	},
 	"repository": {
 		"type": "git",
@@ -58,7 +58,7 @@
 		"webpack": "^4.43.0",
 		"webpack-cli": "^3.3.11",
 		"webpack-dev-server": "^3.11.0",
-    "ts-jest": "^26.0.0"
+		"ts-jest": "^26.0.0"
 	},
 	"dependencies": {
 		"components": "^0.1.0",

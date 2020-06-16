@@ -27,7 +27,7 @@ export default function Typography({
 	...rest
 }: TypographyProps & React.ComponentProps<"div">) {
 	return (
-		<div className={ac(Svariant} {...rest}>
+		<div className={ac(variant)} {...rest}>
 			{children}
 		</div>
 	);
@@ -36,4 +36,3 @@ Typography.defaultProps = {
 	variant: "body1",
 	color: "primary",
 };
-

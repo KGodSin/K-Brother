@@ -1,6 +1,14 @@
 @import "_variables";
 @import "_font";
 
+body {
+	font-family: Roboto;
+}
+
+button {
+	font-family: Roboto;
+}
+
 .h1 {
 	font-size: 96px;
 	letter-spacing: -1.5;
@@ -84,4 +92,3 @@
 .symbol-text-color {
 	color: $symbol-text-color;
 }
-

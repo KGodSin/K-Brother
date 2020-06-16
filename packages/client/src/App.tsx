@@ -1,11 +1,11 @@
 import * as React from "react";
-import Test from "components/Test/index";
+import Button from "components/Button";
 
 export default function App() {
 	return (
 		<div>
 			<p>Hello K-brother</p>
-			<Test />
+			<Button />
 		</div>
 	);
 }

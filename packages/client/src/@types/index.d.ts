@@ -4,3 +4,6 @@ declare module "*.scss" {
 }
 
 declare module "*.mdx";
+declare module "*.png";
+declare module "*.jpeg";
+declare module "*.jpg";

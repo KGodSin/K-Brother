@@ -8,7 +8,7 @@ module.exports = {
 		},
 	],
 	webpackFinal: async config => {
-		config.module.rules = [...config.module.rules, ...webpack.module.rules];
+		config.module.rules = [...webpack.module.rules, ...config.module.rules];
 		config.plugins = [...config.plugins, ...webpack.plugins];
 		config.resolve = { ...config.resolve, ...webpack.resolve };
 		// config.module.rules.push(
